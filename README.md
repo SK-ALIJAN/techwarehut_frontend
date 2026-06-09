@@ -56,22 +56,24 @@ This is a full-stack web application built for a Travel Aggregator Platform. It 
 
 ## Application Access
 - **Frontend Application**: `http://localhost:3000`
-- **Backend API**: `http://localhost:5000/api`
+- **Backend API (Production)**: `https://techwarehut-backend.onrender.com/api`
+- **Backend API (Local)**: `http://localhost:5000/api`
 
 ## Test Accounts
 To create an admin account, you can register a new user and manually change their role to `admin` in your MongoDB database, or modify the register payload.
 
 ## Swagger Documentation & Postman Integration
-You can view the Swagger UI documentation locally at:
-- **Swagger UI**: `http://localhost:5000/api-docs`
-- **Swagger JSON Spec**: `http://localhost:5000/api-docs.json`
+You can view the Swagger UI documentation at:
+- **Swagger UI (Production)**: `https://techwarehut-backend.onrender.com/api-docs`
+- **Swagger UI (Local)**: `http://localhost:5000/api-docs`
+- **Swagger JSON Spec (Production)**: `https://techwarehut-backend.onrender.com/api-docs.json`
+- **Swagger JSON Spec (Local)**: `http://localhost:5000/api-docs.json`
 
 ### Creating a Postman Collection from Swagger:
-1. Make sure your backend server is running (`npm run dev`).
-2. Open **Postman**.
-3. Click the **Import** button in the top-left navigation panel.
-4. Select the **Link** option.
-5. Paste the URL: `http://localhost:5000/api-docs.json`
+1. Open **Postman**.
+2. Click the **Import** button in the top-left navigation panel.
+3. Select the **Link** option.
+4. Paste the URL: `https://techwarehut-backend.onrender.com/api-docs.json` (or `http://localhost:5000/api-docs.json` for local development)
 6. Click **Continue** and then **Import**.
 7. Postman will generate a complete, structured Collection of all API endpoints with pre-populated schema parameters!
 
