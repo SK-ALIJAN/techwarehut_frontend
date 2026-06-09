@@ -1,0 +1,8 @@
+{
+  "/packages/page": "app/packages/page.js",
+  "/packages/[id]/page": "app/packages/[id]/page.js",
+  "/admin/packages/page": "app/admin/packages/page.js",
+  "/my-bookings/page": "app/my-bookings/page.js",
+  "/page": "app/page.js",
+  "/login/page": "app/login/page.js"
+}
