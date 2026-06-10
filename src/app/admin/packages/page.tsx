@@ -325,7 +325,7 @@ export default function AdminPackages() {
                             <MapPin className="w-3.5 h-3.5 text-primary-500" />
                             <span>{pkg.destination}</span>
                           </p>
-                          <div className="flex gap-3 text-2xs text-slate-500 font-semibold mt-1">
+                          <div className="flex flex-wrap gap-x-3 gap-y-1 text-2xs text-slate-500 font-semibold mt-1">
                             <span className="flex items-center gap-0.5">
                               <DollarSign className="w-3 h-3 text-slate-400" />
                               <span>{pkg.price}</span>
@@ -343,7 +343,7 @@ export default function AdminPackages() {
                       </div>
 
                       {/* Right: Actions & Seat Status */}
-                      <div className="flex sm:flex-col items-end gap-3.5 w-full sm:w-auto shrink-0 justify-between sm:justify-start border-t sm:border-t-0 pt-3 sm:pt-0 border-slate-200">
+                      <div className="flex sm:flex-col items-center sm:items-end gap-3.5 w-full sm:w-auto shrink-0 justify-between sm:justify-start border-t sm:border-t-0 pt-3 sm:pt-0 border-slate-200">
                         <div>
                           {pkg.availableSeats === 0 ? (
                             <span className="bg-red-50 text-red-700 px-2 py-0.5 rounded text-2xs font-black uppercase tracking-wider border border-red-100">

@@ -127,7 +127,7 @@ export default function MyBookings() {
                         <span className="text-lg font-bold text-slate-400 italic">Package Unavailable</span>
                       )}
 
-                      <div className="mt-4 grid grid-cols-2 gap-4 text-xs sm:text-sm text-slate-500">
+                      <div className="mt-4 grid grid-cols-1 min-[450px]:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-500">
                         <div className="flex items-center gap-1.5">
                           <Ticket className="w-4 h-4 text-slate-400" />
                           <span>Seats Reserved: <strong className="text-slate-700">{booking.seats}</strong></span>
@@ -136,7 +136,7 @@ export default function MyBookings() {
                           <DollarSign className="w-4 h-4 text-slate-400" />
                           <span>Total Cost: <strong className="text-slate-900">${booking.totalPrice}</strong></span>
                         </div>
-                        <div className="flex items-center gap-1.5 col-span-2">
+                        <div className="flex items-center gap-1.5 min-[450px]:col-span-2">
                           <Calendar className="w-4 h-4 text-slate-400" />
                           <span>Booked on {new Date(booking.createdAt).toLocaleDateString(undefined, { dateStyle: 'medium' })}</span>
                         </div>
@@ -144,7 +144,7 @@ export default function MyBookings() {
                     </div>
 
                     {/* Actions */}
-                    <div className="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between">
+                    <div className="mt-6 pt-4 border-t border-slate-50 flex flex-col min-[450px]:flex-row min-[450px]:items-center justify-between gap-3">
                       <span className="text-xs text-slate-400 font-bold uppercase tracking-wider">
                         Booking ID: {booking._id.substring(booking._id.length - 8)}
                       </span>
@@ -153,7 +153,7 @@ export default function MyBookings() {
                         <button
                           onClick={() => handleCancel(booking._id)}
                           disabled={isCancelling}
-                          className="text-xs font-bold text-red-650 hover:text-red-700 flex items-center gap-1 py-1 px-2.5 rounded-lg hover:bg-red-50 transition"
+                          className="text-xs font-bold text-red-600 hover:text-red-750 flex items-center gap-1 py-1 px-2.5 rounded-lg hover:bg-red-50 transition w-fit"
                         >
                           <XCircle className="w-4 h-4" />
                           <span>Cancel Booking</span>

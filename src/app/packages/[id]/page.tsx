@@ -132,31 +132,31 @@ export default function PackageDetails({ params }: { params: { id: string } }) {
           {/* Main Info Columns */}
           <div className="lg:col-span-2 space-y-8">
             {/* Banner Image */}
-            <div className="h-[400px] w-full rounded-3xl overflow-hidden relative shadow-md bg-slate-200">
+            <div className="h-[260px] sm:h-[400px] w-full rounded-3xl overflow-hidden relative shadow-md bg-slate-200">
               <img 
                 src={getPackageImage(pkg.destination, pkg.image)} 
                 alt={pkg.title}
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/35 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <span className="bg-primary-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-white">
+                <span className="bg-primary-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2.5 inline-block">
                   Featured Escape
                 </span>
-                <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-2 leading-tight">
+                <h1 className="text-xl sm:text-4xl font-extrabold tracking-tight mb-2 leading-tight">
                   {pkg.title}
                 </h1>
-                <div className="flex flex-wrap gap-4 text-xs sm:text-sm text-slate-200 mt-2">
+                <div className="flex flex-wrap gap-3 sm:gap-4 text-2xs sm:text-sm text-slate-200 mt-2">
                   <div className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4 text-primary-400" />
+                    <MapPin className="w-3.5 h-3.5 text-primary-400" />
                     <span>{pkg.destination}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4 text-primary-400" />
+                    <Clock className="w-3.5 h-3.5 text-primary-400" />
                     <span>{pkg.duration} Days / {pkg.duration - 1} Nights</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4 text-primary-400" />
+                    <Calendar className="w-3.5 h-3.5 text-primary-400" />
                     <span>Starts: {new Date(pkg.startDate).toLocaleDateString(undefined, { dateStyle: 'medium' })}</span>
                   </div>
                 </div>

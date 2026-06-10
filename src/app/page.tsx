@@ -58,18 +58,18 @@ export default function Home() {
           </div>
 
           {/* Stats Bar */}
-          <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto mt-16 pt-8 border-t border-slate-800 text-slate-300">
+          <div className="grid grid-cols-3 gap-2 sm:gap-6 max-w-3xl mx-auto mt-16 pt-8 border-t border-slate-800 text-slate-300">
             <div>
-              <p className="text-2xl sm:text-4xl font-extrabold text-white">15k+</p>
-              <p className="text-xs sm:text-sm text-slate-400">Happy Travelers</p>
+              <p className="text-xl sm:text-4xl font-extrabold text-white">15k+</p>
+              <p className="text-[10px] sm:text-sm text-slate-400 mt-1">Happy Travelers</p>
             </div>
             <div>
-              <p className="text-2xl sm:text-4xl font-extrabold text-white">500+</p>
-              <p className="text-xs sm:text-sm text-slate-400">Destinations</p>
+              <p className="text-xl sm:text-4xl font-extrabold text-white">500+</p>
+              <p className="text-[10px] sm:text-sm text-slate-400 mt-1">Destinations</p>
             </div>
             <div>
-              <p className="text-2xl sm:text-4xl font-extrabold text-white">4.9/5</p>
-              <p className="text-xs sm:text-sm text-slate-400">Customer Rating</p>
+              <p className="text-xl sm:text-4xl font-extrabold text-white">4.9/5</p>
+              <p className="text-[10px] sm:text-sm text-slate-400 mt-1">Customer Rating</p>
             </div>
           </div>
         </div>
@@ -89,13 +89,13 @@ export default function Home() {
         </div>
 
         {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[1, 2, 3].map((n) => (
               <div key={n} className="bg-white border border-slate-100 rounded-2xl h-[420px] animate-pulse" />
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {packages.map((pkg: any) => (
               <Link href={`/packages/${pkg._id}`} key={pkg._id} className="group">
                 <div className="bg-white rounded-2xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1">
